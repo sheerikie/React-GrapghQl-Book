@@ -1,0 +1,72 @@
+
+.text-center {
+  text-align: center;
+}
+.grid-container {
+display: grid;
+grid-template-columns: 40% 40%;
+gap: 10px;
+justify-content: center;
+background-color: #2196F3;
+padding: 10px;
+}
+
+.grid-container > div {
+background-color: rgba(255, 255, 255, 0.8);
+text-align: center;
+padding: 20px 0;
+font-size: 30px;
+}
+
+.page {
+  border: 1px solid orange;
+  flex: 50%;
+  min-height: 50vh;
+  padding: 5px;
+  position: relative;
+  font-size: 32px;
+
+  .page-number {
+      text-align: center;
+      position: absolute;
+      bottom: 2px;
+      width: 100%;
+      font-size: 16px;
+  }
+}
+
+.nav-button {
+  margin: 20px;
+}
+button {
+background-color: orange;
+color: white;
+border: none;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+font-size: 18px;
+width: 300px;
+
+&:disabled {
+    background-color: darkgrey;
+    &:hover {
+        cursor: default;
+        color: white;
+    }
+}
+&:hover {
+  background-color: lightsalmon;
+  color: darkgray;
+  cursor: pointer;
+}
+
+}
+.spinner {
+position: absolute;
+top: 50%;
+left: 50%;
+margin-right: -50%;
+transform: translate(-50%, -50%) 
+}
+
