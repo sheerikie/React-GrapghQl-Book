@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import query from './GraphQuery';
 import NavButton from "./NavButton";
+import Token from "./Token";
 import endPoint from "./endPoint";
 import Page from "./Page";
 import {Rings} from 'react-loader-spinner';
+import BookHeader from "./BookHeader";
 import axios from "axios";
 
 const Book = () => {
@@ -36,9 +38,10 @@ const Book = () => {
         //checks to see if there is a token value,if not displays book page
     return (
         bookAvailable ? (
-            token ? (<p>Token</p>): (
+            token ? (<Token value={token} setToken={setToken}/>): (
               
                 <div className="book-layout">
+                            <BookHeader book={book}/>
 
                             <div className="grid-container">
                                 <Page page={book.pages[pageIndex]} setToken={setToken}/>
